@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#135bec" />
+    <meta
+      name="description"
+      content="Deepanshu Goel - Full Stack Developer Portfolio"
+    />
+   
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+
+      location.hash = "Ｆｕｌｌｓｔａｃｋ－Ｄｅｖｅｌｏｐｅｒ";
+      // moons array (you already had this) — animate it in the document title
+      var moons = ["🌑", "🌘", "🌗", "🌖", "🌕", "🌔", "🌓", "🌒"];
+
+      // Show a single moon next to 'developer' and cycle it — avoids many moons showing at once
+      const MOON_INTERVAL = 200; // ms, change to speed up/slow down
+      const LABEL = "𝕯𝖊𝖊𝖕𝖆𝖓𝖘𝖍𝖚𝕲𝖔𝖊𝖑𝕯𝖊𝖛";
+      let mi = 0;
+      // initial title
+      document.title = moons[mi % moons.length] + " " + LABEL;
+      setInterval(() => {
+        mi = (mi + 1) % moons.length;
+        document.title = moons[mi] + " " + LABEL;
+      }, MOON_INTERVAL);
+
+
+
+      // const blocks = ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"];
+
+      // function makeTerrain() {
+      //   let t = "";
+      //   for (let i = 0; i < 20; i++) {
+      //     t += blocks[Math.floor(Math.random() * blocks.length)];
+      //   }
+      //   return t;
+      // }
+
+      // function render() {
+      //   location.hash =
+      //     makeTerrain() +
+      //     "Ｆｕｌｌｓｔａｃｋ－Ｄｅｖｅｌｏｐｅｒ" +
+      //     makeTerrain();
+      // }
+
+      // setInterval(render, 150);
+    </script>
+  </body>
+</html>
